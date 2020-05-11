@@ -192,6 +192,10 @@ public class UClient
 				instruction += "\\\"ENTERTEXT\\\";";
 				entertextWeb();
 				break;
+			case 3:
+				instruction += "\\\"READTEXT\\\";";
+				readtextWeb();
+				break;
 
 
 		}
@@ -199,7 +203,7 @@ public class UClient
 	}
 	private void entertextWeb()
 	{
-		//Byte[] sendBytes = Encoding.ASCII.GetBytes("COMMAND{\"WEB\";\"ENTERTEXT\";\"https://facebook.com\";\"siyabulela.yawa.9@facebook.com\";\"siyayawa\";}") ;
+		
 		Console.WriteLine("Enter Url");
 		string url = Console.ReadLine();
 		Console.WriteLine("Enter Control ID");
@@ -211,6 +215,27 @@ public class UClient
 		instruction += "\\\"" + url + "\\\";";
 		instruction += "\\\"" + id + "\\\";";
 		instruction += "\\\"" + text + "\\\";";
+
+
+		Console.WriteLine(instruction);
+		Console.ReadLine();
+
+		Byte[] sendBytes = Encoding.ASCII.GetBytes(instruction);
+
+		client.Send(sendBytes, sendBytes.Length);
+	}
+	private void readtextWeb()
+	{
+
+		Console.WriteLine("Enter Url");
+		string url = Console.ReadLine();
+		Console.WriteLine("Enter Control ID");
+		string id = Console.ReadLine();
+		
+
+
+		instruction += "\\\"" + url + "\\\";";
+		instruction += "\\\"" + id + "\\\";";
 
 
 		Console.WriteLine(instruction);

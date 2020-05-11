@@ -25,18 +25,18 @@ namespace CoreServer
             return id.ToString();
         }
 
-        public int EnterText(string id, string elementId, string text)
+        public int EnterText(string url, string elementId, string text)
         {
 
 
 
             IWebDriver driver;
             driver = new ChromeDriver();
-            driver.Url = id;
+            driver.Url = url;
 
-            driver.FindElement(By.Id("email")).SendKeys(elementId);
-            driver.FindElement(By.Id("pass")).SendKeys(text);
-            ClickAndWaitForPageToLoad(driver, By.Id("loginbutton"));
+            driver.FindElement(By.Id(elementId)).SendKeys(text);
+          //  driver.FindElement(By.Id("pass")).SendKeys(text);
+           // ClickAndWaitForPageToLoad(driver, By.Id("loginbutton"));
             /*
 
             id = "https://support.google.com/accounts/answer/6010255?hl=en";
@@ -65,26 +65,33 @@ namespace CoreServer
             return Result.OK;
         }
 
-        public string ReadText(string id, string elementId)
+        public string ReadText(string url, string elementId)
         {
-            GlobalObject global = GlobalObject.Instance;
 
             IWebDriver driver;
+            driver = new ChromeDriver();
+            driver.Url = url;
 
-            Object tempObject;
+            string text=driver.FindElement(By.Id(elementId)).Text;
+            return text;
+            //GlobalObject global = GlobalObject.Instance;
 
-            global.fileIndex.TryGetValue(id, out tempObject);
+            //IWebDriver driver;
 
-            if (tempObject is IWebDriver)
-            {
-                driver = (IWebDriver)tempObject;
-            }
-            else
-            {
-                return "";
-            }
+            //Object tempObject;
 
-            return driver.FindElement(By.ClassName(elementId)).Text;
+            //global.fileIndex.TryGetValue(id, out tempObject);
+
+            //if (tempObject is IWebDriver)
+            //{
+            //    driver = (IWebDriver)tempObject;
+            //}
+            //else
+            //{
+            //    return "";
+            //}
+
+            //return driver.FindElement(By.ClassName(elementId)).Text;
         }
 
         public int ClickButton(string id, string elementId)
