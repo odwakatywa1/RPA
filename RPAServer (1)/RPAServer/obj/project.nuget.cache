@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "zm+znwq7xf/iOtqacn0HoggcwFsQyXqbpIX8wg/9ViGnMYWLzRZlCYtRqOjUvu5rdJTzyd+0BHMGSqlySLMcDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nico\\Source\\Repos\\RPAServer\\RPAServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nico\\.nuget\\packages\\epplus\\5.1.1\\epplus.5.1.1.nupkg.sha512",
+    "C:\\Users\\Nico\\.nuget\\packages\\mailkit\\2.6.0\\mailkit.2.6.0.nupkg.sha512",
+    "C:\\Users\\Nico\\.nuget\\packages\\mimekit\\2.6.0\\mimekit.2.6.0.nupkg.sha512",
+    "C:\\Users\\Nico\\.nuget\\packages\\portable.bouncycastle\\1.8.5\\portable.bouncycastle.1.8.5.nupkg.sha512",
+    "C:\\Users\\Nico\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512"
+  ],
+  "logs": []
+}
