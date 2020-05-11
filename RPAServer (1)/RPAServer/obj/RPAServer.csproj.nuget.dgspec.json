@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "format": 1,
   "restore": {
@@ -66,4 +67,78 @@
       }
     }
   }
+=======
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+        "projectName": "RPAServer",
+        "projectPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+        "packagesPath": "C:\\Users\\S4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\S4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2020.3.2, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+>>>>>>> 593ea747e51996017bf350686de4e64cae3f8f76
 }
