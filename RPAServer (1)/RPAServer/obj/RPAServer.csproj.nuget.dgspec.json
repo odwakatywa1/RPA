@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {}
+    "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {}
   },
   "projects": {
-    "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {
+    "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+        "projectUniqueName": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
         "projectName": "RPAServer",
-        "projectPath": "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+        "projectPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
         "packagesPath": "C:\\Users\\S4\\.nuget\\packages\\",
-        "outputPath": "C:\\Automation\\RPAServer (1)\\RPAServer\\obj\\",
+        "outputPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -37,6 +37,10 @@
             "EPPlus": {
               "target": "Package",
               "version": "[5.1.1, )"
+            },
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2020.3.2, )"
             },
             "MailKit": {
               "target": "Package",

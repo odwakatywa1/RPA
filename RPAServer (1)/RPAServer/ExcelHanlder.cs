@@ -27,6 +27,32 @@ namespace CoreServer
             return id.ToString();
         }
 
+        public void OpenExcelDocument(string filename)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            FileInfo fileInfo = new FileInfo(@filename);
+
+            using (ExcelPackage excelPackage = new ExcelPackage(fileInfo))
+            {
+                //ExcelWorksheet firstWorksheet = excelPackage.Workbook.Worksheets[1];
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
+
+                //get worksheet by name
+                //ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
+
+
+
+                //string valueA1 = worksheet.Cells["A1"].Value.ToString();
+                //Console.WriteLine(valueA1);
+
+                excelPackage.Save();
+                System.Diagnostics.Process.Start(filename);
+            }
+
+        }
+
+
         public int SaveExcelDocument(string id)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;

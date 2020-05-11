@@ -22,6 +22,31 @@
           "lib/net45/EPPlus.dll": {}
         }
       },
+      "Iron.Assets.Rendering.Windows/18.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        }
+      },
+      "IronPdf/2020.3.2": {
+        "type": "package",
+        "dependencies": {
+          "Iron.Assets.Rendering.Windows": "18.0.1"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net40/IronPdf.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.dll": {}
+        }
+      },
       "MailKit/2.6.0": {
         "type": "package",
         "dependencies": {
@@ -100,6 +125,31 @@
         },
         "runtime": {
           "lib/net45/EPPlus.dll": {}
+        }
+      },
+      "Iron.Assets.Rendering.Windows/18.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        }
+      },
+      "IronPdf/2020.3.2": {
+        "type": "package",
+        "dependencies": {
+          "Iron.Assets.Rendering.Windows": "18.0.1"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net40/IronPdf.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.dll": {}
         }
       },
       "MailKit/2.6.0": {
@@ -182,6 +232,31 @@
           "lib/net45/EPPlus.dll": {}
         }
       },
+      "Iron.Assets.Rendering.Windows/18.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        }
+      },
+      "IronPdf/2020.3.2": {
+        "type": "package",
+        "dependencies": {
+          "Iron.Assets.Rendering.Windows": "18.0.1"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net40/IronPdf.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.dll": {}
+        }
+      },
       "MailKit/2.6.0": {
         "type": "package",
         "dependencies": {
@@ -260,6 +335,31 @@
         },
         "runtime": {
           "lib/net45/EPPlus.dll": {}
+        }
+      },
+      "Iron.Assets.Rendering.Windows/18.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
+        }
+      },
+      "IronPdf/2020.3.2": {
+        "type": "package",
+        "dependencies": {
+          "Iron.Assets.Rendering.Windows": "18.0.1"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing",
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net40/IronPdf.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronPdf.dll": {}
         }
       },
       "MailKit/2.6.0": {
@@ -344,6 +444,34 @@
         "lib/netstandard2.1/EPPlus.dll",
         "lib/netstandard2.1/EPPlus.xml",
         "license.md",
+        "readme.txt"
+      ]
+    },
+    "Iron.Assets.Rendering.Windows/18.0.1": {
+      "sha512": "BDiWBK/K2ax4iiGnVkpn/lybSysG+oAV9rXZO8L8wJgs98j3aMALOYlGjpeQCFUVkSJ0um3MBFQ1Y511eKjeaA==",
+      "type": "package",
+      "path": "iron.assets.rendering.windows/18.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "iron.assets.rendering.windows.18.0.1.nupkg.sha512",
+        "iron.assets.rendering.windows.nuspec",
+        "lib/net40/IronPdf.Assets.Rendering.Windows.dll"
+      ]
+    },
+    "IronPdf/2020.3.2": {
+      "sha512": "udEY94B8FGRVxD2mw2Hug+Xh7msVpEWRx7e+925eX6FM40qp9vC1U0ok8DoWAmVV6zObOiyL6IwxR7XcQPLIqA==",
+      "type": "package",
+      "path": "ironpdf/2020.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ironpdf.2020.3.2.nupkg.sha512",
+        "ironpdf.nuspec",
+        "lib/net40/IronPdf.dll",
+        "lib/net40/IronPdf.xml",
+        "lib/netstandard2.0/IronPdf.dll",
+        "lib/netstandard2.0/IronPdf.xml",
         "readme.txt"
       ]
     },
@@ -449,6 +577,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
       "EPPlus >= 5.1.1",
+      "IronPdf >= 2020.3.2",
       "MailKit >= 2.6.0",
       "MimeKit >= 2.6.0",
       "Selenium.WebDriver >= 3.141.0"
@@ -460,11 +589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+      "projectUniqueName": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
       "projectName": "RPAServer",
-      "projectPath": "C:\\Automation\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
+      "projectPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\RPAServer.csproj",
       "packagesPath": "C:\\Users\\S4\\.nuget\\packages\\",
-      "outputPath": "C:\\Automation\\RPAServer (1)\\RPAServer\\obj\\",
+      "outputPath": "C:\\Users\\S4\\Desktop\\RPA\\RPAServer (1)\\RPAServer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -490,6 +619,10 @@
           "EPPlus": {
             "target": "Package",
             "version": "[5.1.1, )"
+          },
+          "IronPdf": {
+            "target": "Package",
+            "version": "[2020.3.2, )"
           },
           "MailKit": {
             "target": "Package",

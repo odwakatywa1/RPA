@@ -38,3 +38,16 @@ C:\Automation\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csprojAssemblyReferenc
 C:\Automation\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csproj.CopyComplete
 C:\Automation\RPAServer (1)\RPAServer\obj\Debug\RPAServer.exe
 C:\Automation\RPAServer (1)\RPAServer\obj\Debug\RPAServer.pdb
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\chromedriver.exe
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\RPAServer.exe.config
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\RPAServer.exe
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\RPAServer.pdb
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\EPPlus.dll
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\MailKit.dll
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\MimeKit.dll
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\bin\Debug\WebDriver.dll
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csprojAssemblyReference.cache
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csproj.CopyComplete
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\obj\Debug\RPAServer.exe
+C:\Users\S4\Desktop\RPA\RPAServer (1)\RPAServer\obj\Debug\RPAServer.pdb

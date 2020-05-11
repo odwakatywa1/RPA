@@ -21,7 +21,7 @@ public class UClient
 
 	public void Connect()
 	{
-		 client = new UdpClient(13001);
+		client = new UdpClient(13001);
 		try
 		{
 
@@ -38,7 +38,10 @@ public class UClient
 
 			//Byte[] sendBytes = Encoding.ASCII.GetBytes("COMMAND{\"MAIL\";\"SEND\";\"siyayawa32@gmail.com\";\"siyayawa32@gmail.com\";\"siyayawa32@gmail.com\";\"siyayawa32@gmail.com\";\"siyayawa32@gmail.com\";\"Mehlulwa2010*\"}") ;
 
-			//client.Send(sendBytes, sendBytes.Length);
+			Byte[] sendBytes = Encoding.ASCII.GetBytes("COMMAND{\"MAIL\";\"SEND\";\"odwakatywa1@gmail.com\";\"odwakatywa1@gmail.com\";\"Subject\";\"Body\";\"odwakatywa1@gmail.com\";\"odwa200196*\"}");
+
+
+			client.Send(sendBytes, sendBytes.Length);
 
 			IPEndPoint recv = new IPEndPoint(IPAddress.Any, 13001);
 
@@ -107,7 +110,7 @@ public class UClient
 		Console.WriteLine("Enter url");
 		string url = Console.ReadLine();
 
-		instruction += "\""+ url;
+		instruction += "\"" + url;
 		instruction += "\\\";}";
 		Console.WriteLine(instruction);
 		//Console.ReadLine();
@@ -123,7 +126,7 @@ public class UClient
 	private void mailMenu()
 	{
 		Console.WriteLine("1. SEND");
-		int choice =int.Parse( Console.ReadLine());
+		int choice = int.Parse(Console.ReadLine());
 
 		switch (choice)
 		{
@@ -136,8 +139,8 @@ public class UClient
 	}
 	private void sendMail()
 	{
-		
-	//	public int SendMail(string fromAddress, string toAddress, string subject, string messageBody, string username, string password)
+
+		//	public int SendMail(string fromAddress, string toAddress, string subject, string messageBody, string username, string password)
 		//client.Send(sendBytes, sendBytes.Length);
 
 		Console.WriteLine("Enter email address to send FROM ");
@@ -152,7 +155,7 @@ public class UClient
 		string subject = Console.ReadLine();
 		Console.WriteLine("Enter message body ");
 		string body = Console.ReadLine();
-		instruction += "\\\""+from+"\\\";";
+		instruction += "\\\"" + from + "\\\";";
 		instruction += "\\\"" + to + "\\\";";
 		instruction += "\\\"" + subject + "\\\";";
 		instruction += "\\\"" + body + "\\\";";
@@ -199,26 +202,7 @@ public class UClient
 	}
 	private void entertextWeb()
 	{
-		//Byte[] sendBytes = Encoding.ASCII.GetBytes("COMMAND{\"WEB\";\"ENTERTEXT\";\"https://facebook.com\";\"siyabulela.yawa.9@facebook.com\";\"siyayawa\";}") ;
-		Console.WriteLine("Enter Url");
-		string url = Console.ReadLine();
-		Console.WriteLine("Enter Control ID");
-		string id = Console.ReadLine();
-		Console.WriteLine("Enter text");
-		string text = Console.ReadLine();
 
-
-		instruction += "\\\"" + url + "\\\";";
-		instruction += "\\\"" + id + "\\\";";
-		instruction += "\\\"" + text + "\\\";";
-
-
-		Console.WriteLine(instruction);
-		Console.ReadLine();
-
-		Byte[] sendBytes = Encoding.ASCII.GetBytes(instruction);
-
-		client.Send(sendBytes, sendBytes.Length);
 	}
 
 	private void excelMenu()
@@ -252,7 +236,7 @@ public class UClient
 				instruction += "\\\"SAVE\\\";";
 				saveSpreadsheet();
 				break;
-			default :
+			default:
 				Console.WriteLine("Unknown action quitting");
 				return;
 				//break;
@@ -276,7 +260,7 @@ public class UClient
 		string path = Console.ReadLine();
 		Console.WriteLine("Enter the name of the file you want to create: ");
 		string filename = Console.ReadLine();
-		instruction += "\\"+path+filename;
+		instruction += "\\" + path + filename;
 		instruction += "\";}";
 		Console.WriteLine(instruction);
 		Console.ReadLine();
