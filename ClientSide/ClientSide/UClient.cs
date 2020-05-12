@@ -195,10 +195,6 @@ public class UClient
 				instruction += "\\\"ENTERTEXT\\\";";
 				entertextWeb();
 				break;
-			case 3:
-				instruction += "\\\"READTEXT\\\";";
-				readtextWeb();
-				break;
 
 
 		}
@@ -206,38 +202,7 @@ public class UClient
 	}
 	private void entertextWeb()
 	{
-<<<<<<< HEAD
-		
-		Console.WriteLine("Enter Url");
-		string url = Console.ReadLine();
-		Console.WriteLine("Enter Control ID");
-		string id = Console.ReadLine();
-		Console.WriteLine("Enter text");
-		string text = Console.ReadLine();
-=======
->>>>>>> 593ea747e51996017bf350686de4e64cae3f8f76
 
-	}
-	private void readtextWeb()
-	{
-
-		Console.WriteLine("Enter Url");
-		string url = Console.ReadLine();
-		Console.WriteLine("Enter Control ID");
-		string id = Console.ReadLine();
-		
-
-
-		instruction += "\\\"" + url + "\\\";";
-		instruction += "\\\"" + id + "\\\";";
-
-
-		Console.WriteLine(instruction);
-		Console.ReadLine();
-
-		Byte[] sendBytes = Encoding.ASCII.GetBytes(instruction);
-
-		client.Send(sendBytes, sendBytes.Length);
 	}
 
 	private void excelMenu()

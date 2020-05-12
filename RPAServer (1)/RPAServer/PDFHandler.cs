@@ -1,4 +1,4 @@
-﻿/*using IronPdf;
+﻿using IronPdf;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -71,4 +71,4 @@ namespace CoreServer
         }
 
     }
-}*/
+}

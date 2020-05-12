@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
 C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.exe
 C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
@@ -11,29 +10,3 @@ C:\Automation\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
 C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.csprojAssemblyReference.cache
 C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.exe
 C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
-C:\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
-C:\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.exe
-C:\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
-C:\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.csprojAssemblyReference.cache
-C:\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.exe
-C:\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
-=======
-C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
-C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.exe
-C:\Users\S4\source\repos\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
-C:\Users\S4\source\repos\ClientSide\ClientSide\obj\Debug\ClientSide.csprojAssemblyReference.cache
-C:\Users\S4\source\repos\ClientSide\ClientSide\obj\Debug\ClientSide.exe
-C:\Users\S4\source\repos\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
-C:\Automation\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
-C:\Automation\ClientSide\ClientSide\bin\Debug\ClientSide.exe
-C:\Automation\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
-C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.csprojAssemblyReference.cache
-C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.exe
-C:\Automation\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.exe.config
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.exe
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\bin\Debug\ClientSide.pdb
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.csprojAssemblyReference.cache
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.exe
-C:\Users\S4\Desktop\RPA\ClientSide\ClientSide\obj\Debug\ClientSide.pdb
->>>>>>> 593ea747e51996017bf350686de4e64cae3f8f76

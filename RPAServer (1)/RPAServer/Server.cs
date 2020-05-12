@@ -82,7 +82,11 @@ class Server
                             break;
 
                         case "OPEN":
-                         
+                            exh = new ExcelHandler();
+                            path = parameters[2].Substring(1, parameters[2].Length - 2);
+                            exh.OpenExcelDocument(path);
+
+                            //exh.close(true);
                             break;
 
                         case "SAVE":
@@ -112,8 +116,8 @@ class Server
                         case "ENTERTEXT":
 
                             web = new WebHandler();
-                           // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
-                            int res = web.EnterText(parameters[2].Substring(2,parameters[2].Length-4), parameters[3].Substring(2, parameters[3].Length - 4), parameters[4].Substring(2, parameters[4].Length - 4));
+                            // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
+                            int res = web.EnterText(parameters[2].Substring(1, parameters[2].Length - 2), parameters[3].Substring(1, parameters[3].Length - 2), parameters[4].Substring(1, parameters[4].Length - 2));
 
                             resultString = "RESULT{" + res + ";}";
 
@@ -122,7 +126,7 @@ class Server
                         case "READTEXT":
 
                             web = new WebHandler();
-                            string text = web.ReadText(parameters[2].Substring(2, parameters[2].Length-4), parameters[3].Substring(2, parameters[3].Length - 4));
+                            string text = web.ReadText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", ""));
 
                             if (text.Equals(""))
                             {
@@ -166,35 +170,35 @@ class Server
                     {
                         case "OPEN":
 
-                            /*PDFHandler pdf = new PDFHandler();
+                            PDFHandler pdf = new PDFHandler();
                             string path = parameters[2].Substring(1, parameters[2].Length - 2);
                             string pdfId = pdf.OpenPDF(path);
-                            resultString = "RESULT{0;\"" + pdfId + "\";}";*/
+                            resultString = "RESULT{0;\"" + pdfId + "\";}";
 
                             break;
 
                         case "READTEXTFROMPAGE":
 
-                        /*pdf = new PDFHandler();
-                        string text = pdf.ReadTextFromPage(parameters[2].Substring(1, 36), Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
+                            pdf = new PDFHandler();
+                            string text = pdf.ReadTextFromPage(parameters[2].Substring(1, 36), Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
 
-                        if (text.Equals(""))
-                        {
-                            resultString = "RESULT{1;\"ERROR\"}";
-                        }
-                        else
-                        {
-                            resultString = "RESULT{0;\"" + text + "\";}";
-                        }
+                            if (text.Equals(""))
+                            {
+                                resultString = "RESULT{1;\"ERROR\"}";
+                            }
+                            else
+                            {
+                                resultString = "RESULT{0;\"" + text + "\";}";
+                            }
 
-                        break;*/
+                            break;
 
                         case "CLOSE":
 
-                            /*pdf = new PDFHandler();
+                            pdf = new PDFHandler();
                             int res = pdf.ClosePDF(parameters[2].Substring(1, 36));
 
-                            resultString = "RESULT{" + res + ";}";*/
+                            resultString = "RESULT{" + res + ";}";
 
                             break;
 
