@@ -116,8 +116,8 @@ class Server
                         case "ENTERTEXT":
 
                             web = new WebHandler();
-                            // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
-                            int res = web.EnterText(parameters[2].Substring(1, parameters[2].Length - 2), parameters[3].Substring(1, parameters[3].Length - 2), parameters[4].Substring(1, parameters[4].Length - 2));
+                           // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
+                            int res = web.EnterText(parameters[2].Substring(1,parameters[2].Length-2), parameters[3].Substring(1, parameters[3].Length - 2), parameters[4].Substring(1, parameters[4].Length - 2));
 
                             resultString = "RESULT{" + res + ";}";
 
@@ -180,8 +180,11 @@ class Server
                         case "READTEXTFROMPAGE":
 
                             pdf = new PDFHandler();
-                            string text = pdf.ReadTextFromPage(parameters[2].Substring(1, 36), Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
-
+                            path = parameters[2].Substring(1, parameters[2].Length - 2);
+                            pdfId = pdf.OpenPDF(path);
+                            Console.WriteLine("The ID to match : " + pdfId);
+                            //string text = pdf.ReadTextFromPage(parameters[2].Substring(1, 36), Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
+                            string text = pdf.ReadTextFromPage(pdfId, Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
                             if (text.Equals(""))
                             {
                                 resultString = "RESULT{1;\"ERROR\"}";
@@ -196,7 +199,7 @@ class Server
                         case "CLOSE":
 
                             pdf = new PDFHandler();
-                            int res = pdf.ClosePDF(parameters[2].Substring(1, 36));
+                            int res = pdf.ClosePDF(parameters[2].Substring(1, parameters[2].Length - 2));
 
                             resultString = "RESULT{" + res + ";}";
 
@@ -306,6 +309,9 @@ class Server
                 string resultString = CommandHandler(data);
 
                 Byte[] reply = System.Text.Encoding.ASCII.GetBytes(resultString);
+
+                //server.Send(reply, reply.Length) Non-connected socket!
+
                 sender.SendTo(reply, send);
                 Console.WriteLine("{1}: Sent: {0}", resultString, Thread.CurrentThread.ManagedThreadId);
 

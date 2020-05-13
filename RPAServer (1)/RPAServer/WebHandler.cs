@@ -28,8 +28,6 @@ namespace CoreServer
         public int EnterText(string id, string elementId, string text)
         {
 
-
-
             IWebDriver driver;
             driver = new ChromeDriver();
             driver.Url = id;

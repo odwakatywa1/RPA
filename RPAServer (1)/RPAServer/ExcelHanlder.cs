@@ -33,7 +33,7 @@ namespace CoreServer
 
             FileInfo fileInfo = new FileInfo(@filename);
 
-            using (ExcelPackage excelPackage = new ExcelPackage(fileInfo))
+            using(ExcelPackage excelPackage = new ExcelPackage(fileInfo))
             {
                 //ExcelWorksheet firstWorksheet = excelPackage.Workbook.Worksheets[1];
                 ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
@@ -41,13 +41,20 @@ namespace CoreServer
                 //get worksheet by name
                 //ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
 
-
+                
 
                 //string valueA1 = worksheet.Cells["A1"].Value.ToString();
                 //Console.WriteLine(valueA1);
 
                 excelPackage.Save();
-                System.Diagnostics.Process.Start(filename);
+
+                System.Diagnostics.Process process;
+
+                process = System.Diagnostics.Process.Start(filename);
+
+                int processID = process.Id;
+
+
             }
 
         }

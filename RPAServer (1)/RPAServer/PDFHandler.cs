@@ -12,14 +12,20 @@ namespace CoreServer
             PdfDocument document = null;
 
             document = PdfDocument.FromFile(path);
-
+            
             GlobalObject global = GlobalObject.Instance;
 
             Guid id = Guid.NewGuid();
 
             global.fileIndex.Add(id.ToString(), document);
 
+            System.Diagnostics.Process.Start(path);
+
+
+            //Console.WriteLine("ID Added : " + id.ToString());
+
             return id.ToString();
+            
         }
 
         public int ClosePDF(string id)
@@ -32,7 +38,8 @@ namespace CoreServer
 
             global.fileIndex.TryGetValue(id, out tempObject);
 
-            if (tempObject is PdfDocument)
+            //if (tempObject is PdfDocument)
+            if(id.Substring(id.Length-3, 3).Equals("pdf")) //Check the extension
             {
                 document = (PdfDocument)tempObject;
             }
@@ -58,6 +65,13 @@ namespace CoreServer
 
             global.fileIndex.TryGetValue(id, out tempObject);
 
+            if(tempObject == null)
+            {
+                Console.WriteLine("The object is NULL");
+            }
+
+
+            //if(id.Substring(id.Length-3, 3).Equals("pdf")) //Check the extension
             if (tempObject is PdfDocument)
             {
                 document = (PdfDocument)tempObject;
@@ -67,7 +81,8 @@ namespace CoreServer
                 return "";
             }
 
-            return document.ExtractTextFromPage(0);
+            //return document.ExtractTextFromPage(0);
+            return document.ExtractTextFromPage(page - 1);
         }
 
     }
