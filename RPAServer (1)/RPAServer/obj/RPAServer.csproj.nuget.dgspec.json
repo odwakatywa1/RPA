@@ -38,6 +38,14 @@
               "target": "Package",
               "version": "[5.1.1, )"
             },
+            "IronOcr": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "IronOcr.Languages.German": {
+              "target": "Package",
+              "version": "[4.4.4.11, )"
+            },
             "IronPdf": {
               "target": "Package",
               "version": "[2020.3.2, )"
@@ -53,6 +61,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[3.141.0, )"
+            },
+            "Tesseract": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           }
         }

@@ -36,7 +36,14 @@ C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServe
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\MimeKit.dll
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\WebDriver.dll
-C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csprojAssemblyReference.cache
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csproj.CopyComplete
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\IronPdf.Assets.Rendering.Windows.dll
 C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\IronPdf.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\x86\liblept1753.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\x86\libtesseract3052.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\x64\liblept1753.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\x64\libtesseract3052.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\IronOcr.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\Tesseract.dll
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\obj\Debug\RPAServer.csprojAssemblyReference.cache
+C:\Users\S4\Downloads\Automation-master\Automation-master\RPAServer (1)\RPAServer\bin\Debug\IronOcr.German.dll

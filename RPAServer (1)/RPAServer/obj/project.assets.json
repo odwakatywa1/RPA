@@ -31,6 +31,33 @@
           "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
         }
       },
+      "IronOcr/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.dll": {}
+        }
+      },
+      "IronOcr.Languages.German/4.4.4.11": {
+        "type": "package",
+        "dependencies": {
+          "IronOcr": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.German.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.German.dll": {}
+        }
+      },
       "IronPdf/2020.3.2": {
         "type": "package",
         "dependencies": {
@@ -103,6 +130,18 @@
         },
         "runtime": {
           "lib/net45/WebDriver.dll": {}
+        }
+      },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
         }
       }
     },
@@ -136,6 +175,33 @@
           "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
         }
       },
+      "IronOcr/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.dll": {}
+        }
+      },
+      "IronOcr.Languages.German/4.4.4.11": {
+        "type": "package",
+        "dependencies": {
+          "IronOcr": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.German.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.German.dll": {}
+        }
+      },
       "IronPdf/2020.3.2": {
         "type": "package",
         "dependencies": {
@@ -208,6 +274,18 @@
         },
         "runtime": {
           "lib/net45/WebDriver.dll": {}
+        }
+      },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
         }
       }
     },
@@ -241,6 +319,33 @@
           "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
         }
       },
+      "IronOcr/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.dll": {}
+        }
+      },
+      "IronOcr.Languages.German/4.4.4.11": {
+        "type": "package",
+        "dependencies": {
+          "IronOcr": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.German.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.German.dll": {}
+        }
+      },
       "IronPdf/2020.3.2": {
         "type": "package",
         "dependencies": {
@@ -313,6 +418,18 @@
         },
         "runtime": {
           "lib/net45/WebDriver.dll": {}
+        }
+      },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
         }
       }
     },
@@ -346,6 +463,33 @@
           "lib/net40/IronPdf.Assets.Rendering.Windows.dll": {}
         }
       },
+      "IronOcr/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.dll": {}
+        }
+      },
+      "IronOcr.Languages.German/4.4.4.11": {
+        "type": "package",
+        "dependencies": {
+          "IronOcr": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System"
+        ],
+        "compile": {
+          "lib/net40/IronOcr.German.dll": {}
+        },
+        "runtime": {
+          "lib/net40/IronOcr.German.dll": {}
+        }
+      },
       "IronPdf/2020.3.2": {
         "type": "package",
         "dependencies": {
@@ -418,6 +562,18 @@
         },
         "runtime": {
           "lib/net45/WebDriver.dll": {}
+        }
+      },
+      "Tesseract/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
         }
       }
     }
@@ -457,6 +613,34 @@
         "iron.assets.rendering.windows.18.0.1.nupkg.sha512",
         "iron.assets.rendering.windows.nuspec",
         "lib/net40/IronPdf.Assets.Rendering.Windows.dll"
+      ]
+    },
+    "IronOcr/4.4.0": {
+      "sha512": "tOZdFo40tnmsHIEnKa0jcEAcvBPpgSexob3dLJt1Yqrvk5VZCcXRO8xto/bXB1Lj+Rkjm5zxLycU8zgruxEnsg==",
+      "type": "package",
+      "path": "ironocr/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ironocr.4.4.0.nupkg.sha512",
+        "ironocr.nuspec",
+        "lib/net40/IronOcr.dll",
+        "lib/net40/IronOcr.xml",
+        "readme.txt"
+      ]
+    },
+    "IronOcr.Languages.German/4.4.4.11": {
+      "sha512": "OfU0dLWO+uK53Baj+fnau8QyvflxU59z+3jNghsAPhRx0vC5eUFX2ajmglXkaW8bHJ89eiAFsp20mtnZ0pI8ZQ==",
+      "type": "package",
+      "path": "ironocr.languages.german/4.4.4.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ironocr.languages.german.4.4.4.11.nupkg.sha512",
+        "ironocr.languages.german.nuspec",
+        "lib/net40/IronOcr.German.dll",
+        "lib/net40/IronOcr.German.xml",
+        "lib/readme.txt"
       ]
     },
     "IronPdf/2020.3.2": {
@@ -572,15 +756,39 @@
         "selenium.webdriver.3.141.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
+    },
+    "Tesseract/3.3.0": {
+      "sha512": "nTEU8lzCQFsnijUTNwp9kyaRVPQQHx0UqS+bqFgyG0jJm0j3z1i6ETbsA41PG806Xx4mKyC5BSvKlg/X/urzqQ==",
+      "type": "package",
+      "path": "tesseract/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Tesseract.targets",
+        "lib/net20/Tesseract.dll",
+        "lib/net40/Tesseract.dll",
+        "lib/net45/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.xml",
+        "tesseract.3.3.0.nupkg.sha512",
+        "tesseract.nuspec",
+        "x64/liblept1753.dll",
+        "x64/libtesseract3052.dll",
+        "x86/liblept1753.dll",
+        "x86/libtesseract3052.dll"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
       "EPPlus >= 5.1.1",
+      "IronOcr >= 4.4.0",
+      "IronOcr.Languages.German >= 4.4.4.11",
       "IronPdf >= 2020.3.2",
       "MailKit >= 2.6.0",
       "MimeKit >= 2.6.0",
-      "Selenium.WebDriver >= 3.141.0"
+      "Selenium.WebDriver >= 3.141.0",
+      "Tesseract >= 3.3.0"
     ]
   },
   "packageFolders": {
@@ -620,6 +828,14 @@
             "target": "Package",
             "version": "[5.1.1, )"
           },
+          "IronOcr": {
+            "target": "Package",
+            "version": "[4.4.0, )"
+          },
+          "IronOcr.Languages.German": {
+            "target": "Package",
+            "version": "[4.4.4.11, )"
+          },
           "IronPdf": {
             "target": "Package",
             "version": "[2020.3.2, )"
@@ -635,6 +851,10 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[3.141.0, )"
+          },
+          "Tesseract": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           }
         }
       }

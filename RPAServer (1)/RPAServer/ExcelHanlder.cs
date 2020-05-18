@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 
 namespace CoreServer
 {
@@ -23,50 +24,20 @@ namespace CoreServer
             Guid id = Guid.NewGuid();
 
             global.fileIndex.Add(id.ToString(), excelFile);
+            excelFile.Save();
 
             return id.ToString();
         }
 
-        public void OpenExcelDocument(string filename)
-        {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
-            FileInfo fileInfo = new FileInfo(@filename);
-
-            using(ExcelPackage excelPackage = new ExcelPackage(fileInfo))
-            {
-                //ExcelWorksheet firstWorksheet = excelPackage.Workbook.Worksheets[1];
-                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
-
-                //get worksheet by name
-                //ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
-
-                
-
-                //string valueA1 = worksheet.Cells["A1"].Value.ToString();
-                //Console.WriteLine(valueA1);
-
-                excelPackage.Save();
-
-                System.Diagnostics.Process process;
-
-                process = System.Diagnostics.Process.Start(filename);
-
-                int processID = process.Id;
-
-
-            }
-
-        }
-
-
         public int SaveExcelDocument(string id)
         {
+
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             GlobalObject global = GlobalObject.Instance;
 
             ExcelPackage excelFile;
+
 
             Object tempObject;
 
@@ -75,15 +46,109 @@ namespace CoreServer
             if (tempObject is ExcelPackage)
             {
                 excelFile = (ExcelPackage)tempObject;
+                excelFile.Save();
+                return Result.OK;
+            }
+            else
+            {
+                return Result.NOK;
+            }
+        }
+
+
+        public string OpenExcelDocument(string filename)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            FileInfo fileInfo = new FileInfo(@filename);
+
+            ExcelPackage excelFile = new ExcelPackage(fileInfo);
+
+
+
+            GlobalObject global = GlobalObject.Instance;
+
+            Guid id = Guid.NewGuid();
+
+            global.fileIndex.Add(id.ToString(), excelFile);
+
+            return id.ToString();
+
+        }
+        public int writeExcelDocument(string id, string cell, string value)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            GlobalObject global = GlobalObject.Instance;
+
+            ExcelPackage excelFile;
+
+
+            Object tempObject;
+
+            global.fileIndex.TryGetValue(id, out tempObject);
+
+            if (tempObject is ExcelPackage)
+            {
+                excelFile = (ExcelPackage)tempObject;
+                ExcelWorksheet worksheet = excelFile.Workbook.Worksheets["Sheet1"];
+
+                //get worksheet by name
+                //ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
+
+
+
+                worksheet.Cells[cell].Value = value;
+                return Result.OK;
+
+                //excelPackage.Save();
+
             }
             else
             {
                 return Result.NOK;
             }
 
-            excelFile.Save();
 
-            return Result.OK;
         }
+        public string ReadDataExcelDocument(string id, string cell)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            GlobalObject global = GlobalObject.Instance;
+
+            ExcelPackage excelFile;
+
+
+            Object tempObject;
+
+            global.fileIndex.TryGetValue(id, out tempObject);
+
+            if (tempObject is ExcelPackage)
+            {
+                excelFile = (ExcelPackage)tempObject;
+                try
+                {
+                    ExcelWorksheet worksheet = excelFile.Workbook.Worksheets["Sheet1"];
+                    string valueA1 = worksheet.Cells[cell].Value.ToString();
+                    return valueA1;
+                }
+                catch (Exception e)
+                {
+                    return "";
+                }
+                //get worksheet by name
+                //ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets["Sheet1"];
+
+            }
+            else
+            {
+                return "";
+            }
+
+
+        }
+
+
     }
 }

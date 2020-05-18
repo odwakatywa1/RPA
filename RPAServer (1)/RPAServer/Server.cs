@@ -75,21 +75,52 @@ class Server
                             ExcelHandler exh = new ExcelHandler();
                             string path = parameters[2].Substring(1, parameters[2].Length - 2);
                             string fileId = exh.CreateExcelDocument(path);
-                            int res = exh.SaveExcelDocument(fileId);
 
-                            resultString = "RESULT{" + res + ";\"" + fileId + "\";}";
 
+                            // resultString = "RESULT{" + res + ";\"" + fileId + "\";}";
+                            resultString = fileId;
                             break;
 
                         case "OPEN":
-                            exh = new ExcelHandler();
-                            path = parameters[2].Substring(1, parameters[2].Length - 2);
-                            exh.OpenExcelDocument(path);
+                            ExcelHandler exh2 = new ExcelHandler();
+                            string id = parameters[2].Substring(2, parameters[2].Length - 4);
+                            string res2 = exh2.OpenExcelDocument(id);
 
-                            //exh.close(true);
+
+                            // resultString = "RESULT{" + res2 + ";}";
+                            resultString = res2;
+                            break;
+
+                        case "WRITE":
+                            ExcelHandler write = new ExcelHandler();
+                            string writePath = parameters[2].Substring(2, parameters[2].Length - 4);
+                            string writeCell = parameters[3].Substring(2, parameters[3].Length - 4);
+                            string writeValue = parameters[4].Substring(2, parameters[4].Length - 4);
+                            int writeRes = write.writeExcelDocument(writePath, writeCell, writeValue);
+
+
+                            resultString = "RESULT{" + writeRes + ";}";
+
+                            break;
+
+                        case "READ":
+                            ExcelHandler read = new ExcelHandler();
+                            string readPath = parameters[2].Substring(2, parameters[2].Length - 4);
+                            string readCell = parameters[3].Substring(2, parameters[3].Length - 4);
+                            string readRes = read.ReadDataExcelDocument(readPath, readCell);
+
+
+                            resultString = "RESULT{" + readRes + ";}";
+
                             break;
 
                         case "SAVE":
+                            ExcelHandler exh3 = new ExcelHandler();
+                            string Excelpath = parameters[2].Substring(2, parameters[2].Length - 4);
+                            int res3 = exh3.SaveExcelDocument(Excelpath);
+
+
+                            resultString = "RESULT{" + res3 + ";}";
                             break;
 
                         default:
@@ -109,15 +140,15 @@ class Server
                             string url = parameters[2].Substring(1, parameters[2].Length - 2);
                             string webId = web.OpenURL(url);
 
-                            resultString = "RESULT{0;\"" + webId + "\";}";
-
+                            // resultString = "RESULT{0;\"" + webId + "\";}";
+                            resultString = webId;
                             break;
 
                         case "ENTERTEXT":
 
                             web = new WebHandler();
-                           // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
-                            int res = web.EnterText(parameters[2].Substring(1,parameters[2].Length-2), parameters[3].Substring(1, parameters[3].Length - 2), parameters[4].Substring(1, parameters[4].Length - 2));
+                            // int res = web.EnterText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""));
+                            int res = web.EnterText(parameters[2].Substring(2, parameters[2].Length - 4), parameters[3].Substring(2, parameters[3].Length - 4), parameters[4].Substring(2, parameters[4].Length - 4));
 
                             resultString = "RESULT{" + res + ";}";
 
@@ -126,7 +157,7 @@ class Server
                         case "READTEXT":
 
                             web = new WebHandler();
-                            string text = web.ReadText(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", ""));
+                            string text = web.ReadText(parameters[2].Substring(2, parameters[2].Length - 4), parameters[3].Substring(2, parameters[3].Length - 4));
 
                             if (text.Equals(""))
                             {
@@ -142,7 +173,7 @@ class Server
                         case "CLICK":
 
                             web = new WebHandler();
-                            res = web.ClickButton(parameters[2].Substring(1, 36), Regex.Replace(parameters[3], "[^A-Za-z0-9 ]", ""));
+                            res = web.ClickButton(parameters[2].Substring(2, parameters[2].Length - 4), parameters[3].Substring(2, parameters[3].Length - 4));
 
                             resultString = "RESULT{" + res + ";}";
 
@@ -173,6 +204,17 @@ class Server
                             PDFHandler pdf = new PDFHandler();
                             string path = parameters[2].Substring(1, parameters[2].Length - 2);
                             string pdfId = pdf.OpenPDF(path);
+                            //resultString = "RESULT{0;\"" + pdfId + "\";}";
+                            resultString = pdfId;
+
+                            break;
+
+
+                        case "MERGEDOCUMENTS":
+                            pdf = new PDFHandler();
+                            string id1 = parameters[2].Substring(1, parameters[2].Length - 2);
+                            string id2 = parameters[3].Substring(1, parameters[3].Length - 1);
+                            pdfId = pdf.mergeDocuments(id1, id2);
                             resultString = "RESULT{0;\"" + pdfId + "\";}";
 
                             break;
@@ -180,9 +222,9 @@ class Server
                         case "READTEXTFROMPAGE":
 
                             pdf = new PDFHandler();
-                            path = parameters[2].Substring(1, parameters[2].Length - 2);
-                            pdfId = pdf.OpenPDF(path);
-                            Console.WriteLine("The ID to match : " + pdfId);
+                            pdfId = parameters[2].Substring(1, parameters[2].Length - 2);
+                            //pdfId = pdf.OpenPDF(path);
+                            //Console.WriteLine("The ID to match : " + pdfId);
                             //string text = pdf.ReadTextFromPage(parameters[2].Substring(1, 36), Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
                             string text = pdf.ReadTextFromPage(pdfId, Int32.Parse(Regex.Replace(parameters[3], "[^-A-Za-z0-9 ]", "")));
                             if (text.Equals(""))
@@ -191,7 +233,8 @@ class Server
                             }
                             else
                             {
-                                resultString = "RESULT{0;\"" + text + "\";}";
+                                //resultString = "RESULT{0;\"" + text + "\";}";
+                                resultString = text;
                             }
 
                             break;
@@ -230,6 +273,15 @@ class Server
                             break;
 
                         case "SENDWITHATTACHMENTS":
+
+                            MailHandler mail2 = new MailHandler();
+
+                            int res2 = mail2.SendMailWithAttachements(Regex.Replace(parameters[2], "[^A-Za-z0-9@. ]", ""), Regex.Replace(parameters[3], "[^A-Za-z0-9@. ]", ""),
+                                Regex.Replace(parameters[4], "[^A-Za-z0-9 ]", ""), Regex.Replace(parameters[5], "[^A-Za-z0-9,. ]", ""),
+                                Regex.Replace(parameters[6], "[^A-Za-z0-9@. ]", ""), Regex.Replace(parameters[7], "[^A-Za-z0-9 ]", ""), parameters[8].Substring(2, parameters[8].Length - 4));
+
+                            resultString = "RESULT{" + res2 + ";}";
+
                             break;
 
                         default:
@@ -240,7 +292,35 @@ class Server
                     break;
 
 
-                case "APP2":
+                case "OCR":
+                    switch (Regex.Replace(parameters[1], "[^A-Za-z0-9 ]", ""))
+                    {
+
+                        case "READTEXTFROMIMAGE":
+                            OCRHandler ocr = new OCRHandler();
+
+                            string path = parameters[2].Substring(1, parameters[2].Length - 2);
+                            string res = ocr.getTextFromImage(path);
+
+                            resultString = "RESULT{" + res + ";}";
+
+                            break;
+
+                        case "READGERMANTEXTFROMIMAGE":
+                            ocr = new OCRHandler();
+
+                            path = parameters[2].Substring(1, parameters[2].Length - 2);
+                            res = ocr.readGermanText(path);
+
+                            resultString = "RESULT{" + res + ";}";
+
+                            break;
+
+                        default:
+                            break;
+
+                    }
+
                     break;
 
                 default:
